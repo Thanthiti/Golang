@@ -1,14 +1,15 @@
 package main
 
-	import (
-	// 	"github.com/Thanthiti/Golang/animal"
-	// 	"github.com/Thanthiti/Golang/utils"
-	 )
+import (
+	"fmt"
+	"mymodule/004_OOP/animals"
+	"mymodule/004_OOP/utils"
+)
 
 
 func main() {
-	// d := animal.Dog{Name: "Buddy"}
-	// d.Speak()
-
-	// utils.SayHello("Thanthiti")
+	d := animals.Dog{Name: "Buddy"}
+	d.Speak()
+	fmt.Print(test)
+	utils.SayHello("Thanthiti")
 }

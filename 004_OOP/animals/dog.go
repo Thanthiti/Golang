@@ -1,4 +1,4 @@
-package animal
+package animals
 import "fmt"
 
 type Dog struct {
@@ -7,4 +7,5 @@ type Dog struct {
 
 func (d Dog) Speak() {
 	fmt.Println(d.Name, "says: Woof!")
+	fmt.Println("this is ",teet)
 }

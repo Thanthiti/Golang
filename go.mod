@@ -1,3 +1,3 @@
-module github.com/Thanthiti/Golang
+module mymodule
 
 go 1.20
