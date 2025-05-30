@@ -43,11 +43,28 @@ func main(){
 		index++
 	}
 
-	m := map[string]int{
-		"James":      42,
-		"Moneypenny": 32,
+	m := map[int]string{
+		1:     "42",
+		2: "32",
 	}
 	for k, v := range m {
 		fmt.Println("ranging over a map", k, v)
 	}
+
+	slice := []int{}
+	fmt.Println(slice)
+	for i := 0; i <=10;i++ {
+		slice = append(slice, i)
+	}
+	fmt.Println(slice)
+
+	a := [10]int{}
+	fmt.Println(a)
+	for i := 0; i < 10;i++ {
+
+		a[i] = i
+	}
+	fmt.Println(a)
+
+
 }
