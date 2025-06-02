@@ -20,7 +20,7 @@ func MathFunc(n1,n2 int) int{
 }
 
 func Return2param(x,y string) (string,int){
-	return y,22
+	return fmt.Sprint("My last name is ",x," ",y),22
 }
 
 func NameReturn(sum int) (x,y int){
@@ -28,6 +28,17 @@ func NameReturn(sum int) (x,y int){
 	y = sum - 5
 	return 
 }
+//  Variadic Function **** 
+func Sum(Number ...int){
+	Sum := 0
+	for _,n := range Number{
+		Sum+=n
+	}
+	fmt.Println(Number[1])
+	fmt.Println("Sum of Number is : ",Sum)
+}
+
+
 
 func main(){
 	SayHello()
@@ -46,9 +57,18 @@ func main(){
 	fmt.Println("this n before : ",n)
 	n = 20
 	fmt.Println("this n after : ",n)
-	fmt.Print("this const ",n1+20,n2)
+	fmt.Println("this const ",n1+20,n2)
+
+	fmt.Println("--------------")
+	t,v := na("test",12)
+	fmt.Println(t)
+	fmt.Println(v)
+	Sum(1,2,3,4)
+	Slice := []int{1,2,3,4,5}
+	Sum(Slice...)
 	
 
-
-
+}
+func na(name string, age int)(string ,int){
+	return fmt.Sprint(name," is thi old "),age
 }

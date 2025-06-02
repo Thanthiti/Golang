@@ -12,45 +12,10 @@ func main() {
 	}	
 
 	ShowMap(name)
-	{
-		m := map[string]int{
-			"todd":  42,
-			"henry": 16,
-		}
+	DeleteAndCheckMap(name)
+	LoopMap(name)
+	
 
-		if v, ok := m["Padget"]; ok {
-			fmt.Printf("%s is %d years old\n", "Padget", v)
-		} else {
-			fmt.Printf("%s not found\n", "Padget")
-		}
-
-		//delete
-		m["Shakespeare"] = 459
-		fmt.Printf("%#v\n", m)
-		delete(m, "Shakespeare")
-		fmt.Printf("%#v\n", m)
-		delete(m, "Shakespeare") // no pname2ic
-
-		// len
-		fmt.Println("len: ", len(m))
-	}
-
-	{
-		fmt.Println("1 : ")
-		for k, v := range name {
-			fmt.Println(k, v)
-		}
-		
-		fmt.Println("2 : ")
-		for _, v := range name {
-			fmt.Println(v)
-		}
-		
-		fmt.Println("3 : ")
-		for k := range name {
-			fmt.Println(k)
-		}
-	}
 }
 func ShowMap(name map[string]int ){
 
@@ -68,3 +33,38 @@ func ShowMap(name map[string]int ){
 	fmt.Println(len(name2))
 }
 
+func DeleteAndCheckMap(name map[string]int ){
+
+	if v, ok := name["Padget"]; ok {
+		fmt.Printf("%s is %d years old\n", "Padget", v)
+	} else {
+		fmt.Printf("%s not found\n", "Padget")
+	}
+
+	//delete
+	name["Shakespeare"] = 459
+	fmt.Printf("%#v\n", name)
+	delete(name, "Shakespeare")
+	fmt.Printf("%#v\n", name)
+	delete(name, "Shakespeare") 
+
+	// len
+	fmt.Println("len: ", len(name))
+}
+
+func LoopMap(name map[string]int ){
+	fmt.Println("1 : ")
+		for k, v := range name {
+			fmt.Println(k, v)
+		}
+		
+		fmt.Println("2 : ")
+		for _, v := range name {
+			fmt.Println(v)
+		}
+		
+		fmt.Println("3 : ")
+		for k := range name {
+			fmt.Println(k)
+		}
+}
