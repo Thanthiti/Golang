@@ -1,4 +1,5 @@
-//  Count Worlds And Sort Greter to less and show What 's world is more Count
+
+// Count words and sort them from most to least and show which word counts more.
 
 package main
 

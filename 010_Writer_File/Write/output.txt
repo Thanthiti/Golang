@@ -1,0 +1,4 @@
+Line 1: Hello, Go!
+Line 2: Writing multiple lines.
+Line 3: This overwrites the file each time.
+Hello Wordl!
