@@ -1,8 +1,9 @@
 package main
 
 import (
-    "net/http"
-    "html/template"
+	"fmt"
+	"html/template"
+	"net/http"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
@@ -11,16 +12,17 @@ func handler(w http.ResponseWriter, r *http.Request) {
     <html>
     <head>
         <title>Go Server UI</title>
+        <link rel="stylesheet" href="Server/static/style.css">
         <script>
             async function fetchData() {
                 let response = await fetch('/api/data');
                 let data = await response.json();
-                alert('Data: ' + JSON.stringify(data));
+                alert('Data: ' + JSON.stringify(data)); 
             }
         </script>
     </head>
     <body>
-        <h1>Hello from Go!</h1>
+        <h1>Hello from Go!ssddd</h1>
         <button onclick="fetchData()">Fetch Data</button>
     </body>
     </html>
@@ -37,5 +39,11 @@ func apiHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
     http.HandleFunc("/", handler)
     http.HandleFunc("/api/data", apiHandler)
+
+    // Serve static files from the "static" directory
+    fs := http.FileServer(http.Dir("static"))
+    http.Handle("/static/", http.StripPrefix("/static/", fs))
+
     http.ListenAndServe(":8080", nil)
+    fmt.Println("Listing on port 8080....!!")
 }
