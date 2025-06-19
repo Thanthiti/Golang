@@ -1,1 +1,3 @@
 Array ไม่ได้ส่งแบบ Pass by Reference แต่เป็น Slice แทนที่สามารถใช้หลักการนี้ได่
+
+ถ้าจะแปลงเป็น Json ต้องเป็นพิมพ์ใหญ่ เช่น First ไม่ใช่ first , Last (last)

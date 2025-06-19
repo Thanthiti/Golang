@@ -37,7 +37,7 @@ func writeJson(fileName string, person person) error{
 	}
 	defer file.Close()
 
-	enCoder := json.NewEncoder(file)
+	enCoder := json.NewEncoder(file) 
 	enCoder.SetIndent(""," ")
 	err = enCoder.Encode(person)
 	if err != nil{
