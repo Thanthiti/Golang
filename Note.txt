@@ -2,8 +2,34 @@ Array ไม่ได้ส่งแบบ Pass by Reference แต่เป็�
 
 ถ้าจะแปลงเป็น Json ต้องเป็นพิมพ์ใหญ่ เช่น First ไม่ใช่ first , Last (last)
 
-การ Import Package
-go mod init (nameModule)
-go get github.com/gin-gonic/gin 
-go get github.com/sirupsen/logrus
-go install github.com/air-verse/air@latest
+---------------- Import Package for start project ----------------
+// create file go.mod
+go mod init (nameModule)                            
+
+// go framework
+go get github.com/gin-gonic/gin
+
+// log
+go get github.com/sirupsen/logrus                   
+
+// Live server 
+go install github.com/air-verse/air@latest          
+
+---------------- for small db scale ----------------
+go get gorm.io/driver/sqlite 
+
+
+---------------- golang migrate for production ----------------
+
+// import  package
+go install -tags 'postgres' github.com/golang-migrate/migrate/v4/cmd/migrate@latest  
+go install -tags 'sqlite' github.com/golang-migrate/migrate/v4/cmd/migrate@latest
+
+// create file migrations
+migrate create -ext sql -dir migrations -seq create_todo_tabl                        
+
+// run migration
+migrate -database sqlite3://todo.db -path migrations up
+
+// rollback
+migrate -database sqlite3://todo.db -path migrations down
