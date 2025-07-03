@@ -172,4 +172,3 @@ func main(){
 	r.DELETE("/todo/delete/:id",ctrl.DeleteTodo)
 	r.Run(":8080")
 }
-
