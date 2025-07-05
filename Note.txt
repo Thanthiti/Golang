@@ -14,8 +14,10 @@ go get github.com/sirupsen/logrus
 
 // Live server 
 go install github.com/air-verse/air@latest          
+---------------- Posgres ---------------- 
+go get github.com/lib/pq
 
----------------- for small db scale ----------------
+----------------  sqlite ----------------
 go get gorm.io/driver/sqlite 
 
 
