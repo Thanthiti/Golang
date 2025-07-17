@@ -15,21 +15,11 @@ go get github.com/sirupsen/logrus
 // Live server 
 go install github.com/air-verse/air@latest          
 
----------------- for small db scale ----------------
+---------------- sqlite ----------------
 go get gorm.io/driver/sqlite 
 
+---------------- postgres ----------------
 
----------------- golang migrate for production ----------------
 
-// import  package
-go install -tags 'postgres' github.com/golang-migrate/migrate/v4/cmd/migrate@latest  
-go install -tags 'sqlite' github.com/golang-migrate/migrate/v4/cmd/migrate@latest
-
-// create file migrations
-migrate create -ext sql -dir migrations -seq create_todo_tabl                        
-
-// run migration
-migrate -database sqlite3://todo.db -path migrations up
-
-// rollback
-migrate -database sqlite3://todo.db -path migrations down
+---------------- Fiber ----------------
+go get "github.com/gofiber/fiber/v2"
