@@ -10,7 +10,7 @@ func downloadFile(name string, wg *sync.WaitGroup) {
     defer wg.Done()
     fmt.Printf("Downloading %s...\n", name)
     time.Sleep(2 * time.Second)
-    fmt.Printf("Downloaded %s ✅\n", name)
+    fmt.Printf("Downloaded %s \n", name)
 }
 
 func main() {
