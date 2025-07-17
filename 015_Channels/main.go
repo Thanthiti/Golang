@@ -1,14 +1,35 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
+func start(){
+		c := make(chan int,2)
+	// [[],[]]
+	
+	c <- 10
+	// [[10],[]]
+
+	number := <-c
+	// [[],[]] number received 10 from channel 
+	
+	fmt.Println(number)
+
+}
 
 func main() {
-	c := make(chan int)
+	ch := make(chan int)
+	go func()  {
+		time.Sleep(time.Second * 2)
+		fmt.Println("Test 1")
+		ch <- 10
+		}()
 
-	c <- 42
-	number := <-c
-	if number == 42{
-		fmt.Println("True")
-	}
-
+		fmt.Println("Test 2")
+		fmt.Println("Test 3")
+		
+		v := <- ch
+		fmt.Println("Test 4")
+	fmt.Println(v)
 }
