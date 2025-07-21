@@ -10,7 +10,7 @@ type OrderServiceImpl struct {
 	repo OrderRepository
 }
 
-func NewOrderService(repo OrderRepository) OrderService {
+func newOrderService(repo OrderRepository) OrderService {
 	return &OrderServiceImpl{repo: repo}
 }
 
