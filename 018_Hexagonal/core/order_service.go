@@ -6,11 +6,12 @@ type OrderService interface {
 	CreateOrder(order Order) error
 }
 
+
 type OrderServiceImpl struct {
 	repo OrderRepository
 }
 
-func newOrderService(repo OrderRepository) OrderService {
+func NewOrderService(repo OrderRepository) OrderService {
 	return &OrderServiceImpl{repo: repo}
 }
 

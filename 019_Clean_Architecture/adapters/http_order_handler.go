@@ -1,8 +1,8 @@
 package adapters
 
 import (
-	"mymodule/019_Clearn_Architecture/entities"
-	"mymodule/019_Clearn_Architecture/usecases"
+	"mymodule/019_Clean_Architecture/entities"
+	"mymodule/019_Clean_Architecture/usecases"
 
 	"github.com/gofiber/fiber/v2"
 )

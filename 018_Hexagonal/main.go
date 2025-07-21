@@ -18,8 +18,9 @@ func main() {
 	if err != nil{
 		panic("failed to connect database")
 	}
-
+	// NewGormOrderRepository return OrderRepository interface 
 	orderRepo := adapters.NewGormOrderRepository(db)
+	// NewOrderService return OrderService interface
 	orderService := core.NewOrderService(orderRepo)
 	orderHandler := adapters.NewHttpOrderHandler(orderService)
 

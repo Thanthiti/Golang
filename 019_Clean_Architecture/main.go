@@ -2,9 +2,9 @@ package main
 
 import (
 	"log"
-	"mymodule/019_Clearn_Architecture/adapters"
-	"mymodule/019_Clearn_Architecture/entities"
-	"mymodule/019_Clearn_Architecture/usecases"
+	"mymodule/019_Clean_Architecture/adapters"
+	"mymodule/019_Clean_Architecture/entities"
+	"mymodule/019_Clean_Architecture/usecases"
 
 	"github.com/gofiber/fiber/v2"
 	"gorm.io/driver/sqlite"
