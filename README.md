@@ -1,28 +1,39 @@
-# Golang
-Pratice all basic golang for Cooperative Education 
+# Golang Practice Project for Cooperative Education
 
+Basic setup for practicing Golang with popular packages.
 
-Array ไม่ได้ส่งแบบ Pass by Reference แต่เป็น Slice แทนที่สามารถใช้หลักการนี้ได่
+---
 
-ถ้าจะแปลงเป็น Json ต้องเป็นพิมพ์ใหญ่ เช่น First ไม่ใช่ first , Last (last)
+##  Initialize Project
 
----------------- Import Package for start project ----------------
-// create file go.mod
-go mod init (nameModule)                            
+```bash
+go mod init [your-module-name]
 
-// go framework
+# Gin Web Framework
 go get github.com/gin-gonic/gin
 
-// log
-go get github.com/sirupsen/logrus                   
+# Fiber Web Framework
+go get github.com/gofiber/fiber/v2
 
-// Live server 
-go install github.com/air-verse/air@latest          
----------------- Posgres ---------------- 
+# Logger
+go get github.com/sirupsen/logrus
+
+# Live Reload Server
+go install github.com/air-verse/air@latest
+
+# PostgreSQL Driver
 go get github.com/lib/pq
 
-go get gorm.io/driver/sqlite 
+# SQLite Driver gorm
+go get gorm.io/driver/sqlite
 
+# Struct Validator
+go get github.com/go-playground/validator/v10
 
----------------- Fiber ----------------
-go get "github.com/gofiber/fiber/v2"
+# Assert for unit test
+go get github.com/stretchr/testify/assert
+ 
+# Mock DB for unit test
+go get "github.com/DATA-DOG/go-sqlmock"
+
+``` 
