@@ -37,7 +37,7 @@ func TestCreateOrder(t *testing.T){
 		service := NewOrderService(repo)
 		
 		err := service.CreateOrder(Order{Total: -10})
-		assert.NoError(t,err)
-		assert.Equal(t,"total must be positive ",err.Error())
+		assert.Error(t,err)
+		assert.Equal(t,"Total must be positive",err.Error())
 	})
 }

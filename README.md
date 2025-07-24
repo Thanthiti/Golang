@@ -34,6 +34,8 @@ go get github.com/go-playground/validator/v10
 go get github.com/stretchr/testify/assert
  
 # Mock DB for unit test
-go get "github.com/DATA-DOG/go-sqlmock"
+go get github.com/DATA-DOG/go-sqlmock
+go get github.com/stretchr/testify/mock
+
 
 ``` 

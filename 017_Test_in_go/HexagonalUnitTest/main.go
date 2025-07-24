@@ -40,6 +40,7 @@ func InitializeDB() *gorm.DB{
 	return db
 }
 
+
 func main() {
 	app := fiber.New()
 	db := InitializeDB()
